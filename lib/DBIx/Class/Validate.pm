@@ -11,7 +11,7 @@ use parent (
   ), 'DBIx::Class'
 );
 
-use DBIx::Class::Error;
+use DBIx::Class::Validate::Error;
 
 our $VERSION = q(0.0.1);
 
