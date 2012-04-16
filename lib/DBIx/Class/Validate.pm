@@ -19,7 +19,7 @@ sub validate {
   my $self = shift;
   my $error = $self->next::method();
 
-  $self->errors( DBIx::Class::Error->new_from_structure( $error ) );
+  $self->errors( DBIx::Class::Validate::Error->new_from_structure( $error ) );
 }
 
 

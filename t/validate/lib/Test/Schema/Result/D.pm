@@ -1,7 +1,7 @@
 package Test::Schema::Result::D;
 
 use strict;
-use parent 'AM::DBIC::Core';
+use parent 'DBIx::Class::Validate::Core';
 use CLASS;
 
 CLASS->table( 'd' );

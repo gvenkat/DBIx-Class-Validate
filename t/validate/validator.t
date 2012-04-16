@@ -9,8 +9,8 @@ use Data::Dumper;
 
 
 use_ok 'Test::Schema';
-use_ok 'AM::DBIC::Validate';
-can_ok( 'AM::DBIC::Validate', 'validates_numericality_of' );
+use_ok 'DBIx::Class::Validate';
+can_ok( 'DBIx::Class::Validate', 'validates_numericality_of' );
 
 my $dir = "$FindBin::Bin/db"; 
 my $file = "$dir/test.db";
