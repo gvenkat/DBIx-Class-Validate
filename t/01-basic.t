@@ -2,21 +2,24 @@ use strict;
 
 BEGIN {
   my @mods = qw/
-    AM::DBIC::Validate
-    AM::DBIC::Error
-    AM::DBIC::Validate::Number
-    AM::DBIC::Validate::Length
-    AM::DBIC::Validate::Callbacks
-    AM::DBIC::Validate::Inclusion
-    AM::DBIC::Validate::Format
-    AM::DBIC::Validate::Unique
+    Error
+    Core
   /;
+
+  my @fragments = qw/
+    Number
+    Length
+    Callbacks
+    Inclusion
+    Format
+    Unique
+  /;
+
 
   use Test::More 'no_plan'; 
 
-  for ( @mods ) {
-    use_ok $_;
-  }
+  use_ok "DBIx::Class::Validate::$_" for @mods;
+  use_ok "DBIx::Class::Validate::Fragment::$_" for @fragments;
 
 }
 
